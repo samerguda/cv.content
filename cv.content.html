@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        .cv-section {
+            margin-bottom: 20px;
+        }
+        .buttons {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .buttons button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .buttons button:hover {
+            background-color: #45a049;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <button onclick="copyContent()">Copy Content</button>
+            <button onclick="window.print()">Print</button>
+        </div>
+        <h3>Personal-profile- Education-Experince - Skills- Projects- Certificates- languages-hobbies - References</h1>
+        
+        <div id="cv-content">
+            <div class="cv-section">
+                <h2>Personal Information / المعلومات الشخصية</h2>
+                <p>Name: Your Name / الاسم: اسمك</p>
+                <p>Address: Your Address / العنوان: عنوانك</p>
+                <p>Phone: Your Phone Number / رقم الهاتف: رقم هاتفك</p>
+                <p>Email: Your Email / البريد الإلكتروني: بريدك الإلكتروني</p>
+            </div>
+            <div class="cv-section">
+                <h2>Profile / الملف الشخصي</h2>
+                <p>Brief paragraph about your career goals and key skills. / فقرة قصيرة تعبر فيها عن طموحاتك المهنية ومهاراتك الأساسية.</p>
+            </div>
+            <div class="cv-section">
+                <h2>Education / التعليم</h2>
+                <p>Details about your educational background. / ذكر المؤسسات التعليمية والدرجات العلمية.</p>
+            </div>
+            <div class="cv-section">
+                <h2>Work Experience / الخبرات العملية</h2>
+                <p>Details about your previous jobs, responsibilities, and achievements. / وصف للوظائف السابقة والمسؤوليات والإنجازات.</p>
+            </div>
+            <div class="cv-section">
+                <h2>Skills / المهارات</h2>
+                <p>Technical and personal skills. / المهارات الفنية والشخصية.</p>
+            </div>
+            <div class="cv-section">
+                <h2>Projects / المشاريع</h2>
+                <p>Brief description of relevant projects. / وصف مختصر للمشاريع ذات الصلة.</p>
+            </div>
+            <div class="cv-section">
+                <h2>Certificates and Training / الشهادات والتدريبات</h2>
+                <p>Details about your certificates and training courses. / الشهادات والدورات التدريبية.</p>
+            </div>
+            <div class="cv-section">
+                <h2>Languages / اللغات</h2>
+                <p>Languages you speak and your proficiency level. / اللغات ومستوى الإتقان.</p>
+            </div>
+            <div class="cv-section">
+                <h2>Hobbies and Interests / الهوايات والاهتمامات</h2>
+                <p>Personal interests relevant to the job. / الاهتمامات الشخصية المتعلقة بالوظيفة.</p>
+            </div>
+            <div class="cv-section">
+                <h2>References / المراجع</h2>
+                <p>Names of people who can provide recommendations. / أسماء الأشخاص الذين يمكنهم تقديم توصيات.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyContent() {
+            const content = document.getElementById('cv-content').innerText;
+            navigator.clipboard.writeText(content).then(() => {
+                alert('Content copied to clipboard');
+            }).catch(err => {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
